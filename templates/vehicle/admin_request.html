@@ -1,0 +1,33 @@
+{% extends 'vehicle/adminbase.html' %}
+{% load static %}
+{% block content %}
+<div class="admin-section-wrapper">
+  <div class="admin-section-header">Request Management</div>
+  <div class="admin-section-cards-row">
+    <div class="admin-section-card bg-blue">
+      <a href="/admin-view-request" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-eye"></i></div>
+        <div class="admin-section-card-label">View All Requests</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-green">
+      <a href="/admin-add-request" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-plus-circle"></i></div>
+        <div class="admin-section-card-label">Make Request</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-yellow">
+      <a href="/admin-approve-request" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="admin-section-card-label">Approve Request</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-pink">
+      <a href="/admin-view-service-cost" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-rupee-sign"></i></div>
+        <div class="admin-section-card-label">Service Cost</div>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

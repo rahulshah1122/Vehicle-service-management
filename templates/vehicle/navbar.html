@@ -1,0 +1,20 @@
+{% load static %}
+<nav class="vs-navbar">
+  <div class="vs-navbar-container">
+    <a class="vs-navbar-brand" href="/">Vehicle Service Management</a>
+    <div class="vs-navbar-links">
+      <a href="/" class="vs-navbar-link {% if request.path == '/' %}active{% endif %}">Home</a>
+      {% if not user.is_authenticated %}
+        <a href="/login" class="vs-navbar-link {% if 'login' in request.path %}active{% endif %}">Login</a>
+        <a href="/customerlogin" class="vs-navbar-link {% if 'customerlogin' in request.path %}active{% endif %}">Customer</a>
+        <a href="/mechaniclogin" class="vs-navbar-link {% if 'mechaniclogin' in request.path %}active{% endif %}">Mechanic</a>
+        <a href="/adminlogin" class="vs-navbar-link {% if 'adminlogin' in request.path %}active{% endif %}">Admin</a>
+      {% endif %}
+      <a href="/aboutus" class="vs-navbar-link {% if 'aboutus' in request.path %}active{% endif %}">About Us</a>
+      <a href="/contactus" class="vs-navbar-link {% if 'contactus' in request.path %}active{% endif %}">Contact Us</a>
+      {% if user.is_authenticated %}
+        <a href="/logout" class="vs-navbar-link">Logout</a>
+      {% endif %}
+    </div>
+  </div>
+</nav>

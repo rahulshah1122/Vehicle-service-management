@@ -1,0 +1,21 @@
+{% extends 'vehicle/adminbase.html' %}
+{% load static %}
+{% block content %}
+<div class="admin-section-wrapper">
+  <div class="admin-section-header">Customer Management</div>
+  <div class="admin-section-cards-row">
+    <div class="admin-section-card bg-blue">
+      <a href="/admin-view-customer" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-eye"></i></div>
+        <div class="admin-section-card-label">View All Customers</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-green">
+      <a href="/admin-add-customer" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-plus-circle"></i></div>
+        <div class="admin-section-card-label">Add Customer</div>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

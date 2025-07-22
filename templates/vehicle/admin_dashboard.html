@@ -1,0 +1,57 @@
+{% extends 'vehicle/adminbase.html' %}
+{% load static %}
+{% block content %}
+<div class="admindash-wrapper">
+  <div class="admindash-cards-row">
+    <div class="admindash-card">
+      <div class="admindash-card-icon users"><i class="fas fa-users"></i></div>
+      <div class="admindash-card-value">{{total_customer}}</div>
+      <div class="admindash-card-label">Total Customer</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon mechanics"><i class="fas fa-hat-cowboy"></i></div>
+      <div class="admindash-card-value">{{total_mechanic}}</div>
+      <div class="admindash-card-label">Total Mechanic</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon requests"><i class="fas fa-spinner"></i></div>
+      <div class="admindash-card-value">{{total_request}}</div>
+      <div class="admindash-card-label">Total Enquiry</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon feedback"><i class="fas fa-comments"></i></div>
+      <div class="admindash-card-value">{{total_feedback}}</div>
+      <div class="admindash-card-label">Total Feedback</div>
+    </div>
+  </div>
+  <div class="admindash-table-card">
+    <div class="admindash-table-header">Recent Enquiry By Customer</div>
+    <div class="admindash-table-wrapper">
+      <table class="admindash-table">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Vehicle Name</th>
+            <th>Vehicle No</th>
+            <th>Problem</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for customer, enq in data %}
+          <tr>
+            <td>{{customer.get_name}}</td>
+            <td>{{enq.vehicle_name}}</td>
+            <td>{{enq.vehicle_no}}</td>
+            <td>{{enq.problem_description}}</td>
+            <td>{{enq.date}}</td>
+            <td>{{enq.status}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock content %}

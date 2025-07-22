@@ -1,0 +1,41 @@
+{% extends 'vehicle/customerbase.html' %}
+{% load static %}
+{% block content %}
+<div class="admindash-wrapper">
+  <div class="admindash-cards-row">
+    <div class="admindash-card">
+      <div class="admindash-card-icon users"><i class="fas fa-tasks"></i></div>
+      <div class="admindash-card-value">{{new_request_made}}</div>
+      <div class="admindash-card-label">New Request Made</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon requests"><i class="fas fa-spinner"></i></div>
+      <div class="admindash-card-value">{{work_in_progress}}</div>
+      <div class="admindash-card-label">Vehicle Repair In Progress</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon feedback"><i class="fas fa-check-circle"></i></div>
+      <div class="admindash-card-value">{{work_completed}}</div>
+      <div class="admindash-card-label">Vehicle Repaired</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon mechanics"><i class="fas fa-rupee-sign"></i></div>
+      <div class="admindash-card-value">{{bill}}</div>
+      <div class="admindash-card-label">Total Bill</div>
+    </div>
+  </div>
+  <div class="customer-marquee">
+    <marquee behavior="scroll" direction="left">
+      <img src="{% static 'images/ferrari.png' %}" width="120" height="80" alt="ferrari" />
+      <img src="{% static 'images/ford.png' %}" width="120" height="80" alt="ford" />
+      <img src="{% static 'images/lambo.png' %}" width="120" height="80" alt="lambo" />
+      <img src="{% static 'images/mahindra.png' %}" width="120" height="80" alt="mahindra" />
+      <img src="{% static 'images/tvs.png' %}" width="120" height="80" alt="tvs" />
+      <img src="{% static 'images/tata.png' %}" width="120" height="80" alt="tata" />
+      <img src="{% static 'images/hero.png' %}" width="120" height="80" alt="hero" />
+      <img src="{% static 'images/rolls.png' %}" width="120" height="80" alt="rolls" />
+      <img src="{% static 'images/suzuki.png' %}" width="120" height="80" alt="suzuki" />
+    </marquee>
+  </div>
+</div>
+{% endblock content %}

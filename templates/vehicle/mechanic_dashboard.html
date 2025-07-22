@@ -1,0 +1,28 @@
+{% extends 'vehicle/mechanicbase.html' %}
+{% load static %}
+{% block content %}
+<div class="admindash-wrapper">
+  <div class="admindash-cards-row">
+    <div class="admindash-card">
+      <div class="admindash-card-icon users"><i class="fas fa-tasks"></i></div>
+      <div class="admindash-card-value">{{new_work_assigned}}</div>
+      <div class="admindash-card-label">New Work Assigned</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon requests"><i class="fas fa-spinner"></i></div>
+      <div class="admindash-card-value">{{work_in_progress}}</div>
+      <div class="admindash-card-label">Work In Progress</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon feedback"><i class="fas fa-check-circle"></i></div>
+      <div class="admindash-card-value">{{work_completed}}</div>
+      <div class="admindash-card-label">Work Completed</div>
+    </div>
+    <div class="admindash-card">
+      <div class="admindash-card-icon mechanics"><i class="fas fa-rupee-sign"></i></div>
+      <div class="admindash-card-value">{{salary}}</div>
+      <div class="admindash-card-label">Salary</div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

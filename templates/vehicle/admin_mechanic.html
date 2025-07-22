@@ -1,0 +1,39 @@
+{% extends 'vehicle/adminbase.html' %}
+{% load static %}
+{% block content %}
+<div class="admin-section-wrapper">
+  <div class="admin-section-header">Mechanic Management</div>
+  <div class="admin-section-cards-row">
+    <div class="admin-section-card bg-blue">
+      <a href="/admin-view-mechanic" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-eye"></i></div>
+        <div class="admin-section-card-label">View All Mechanics</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-green">
+      <a href="/admin-add-mechanic" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-plus-circle"></i></div>
+        <div class="admin-section-card-label">Add Mechanic</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-yellow">
+      <a href="/admin-approve-mechanic" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="admin-section-card-label">Approve Mechanic</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-pink">
+      <a href="/admin-view-mechanic-salary" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-rupee-sign"></i></div>
+        <div class="admin-section-card-label">View Mechanic Salary</div>
+      </a>
+    </div>
+    <div class="admin-section-card bg-blue">
+      <a href="/admin-mechanic-attendance" class="admin-section-card-link">
+        <div class="admin-section-card-icon"><i class="fas fa-calendar-week"></i></div>
+        <div class="admin-section-card-label">Mechanic Attendance</div>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

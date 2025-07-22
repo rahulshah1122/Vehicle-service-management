@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vehicle Service Management</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'fontawesome-free/css/all.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f8f9fa; }
+    .hero {
+      background: linear-gradient(90deg, #0d6efd 60%, #fff 100%);
+      color: #fff;
+      padding: 5rem 0 3rem 0;
+      border-radius: 0 0 2rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .hero h1 { font-weight: 700; font-size: 2.5rem; }
+    .hero p { font-size: 1.25rem; }
+    .hero-toggle-group {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .hero-toggle-btn {
+      background: #fff;
+      color: #0d6efd;
+      border: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.7rem 1.7rem;
+      border-radius: 0.6rem;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(13,110,253,0.08);
+      outline: none;
+      cursor: pointer;
+      border: 2px solid #fff;
+    }
+    .hero-toggle-btn:hover, .hero-toggle-btn:focus {
+      background: #e3e3e3;
+      color: #0b5ed7;
+      border: 2px solid #0d6efd;
+      text-decoration: none;
+    }
+    .brand-logos img { margin: 0 0.5rem; }
+    .section-title { font-weight: 600; color: #0d6efd; margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  {% include "vehicle/navbar.html" %}
+  <section class="hero" style="text-align:center;">
+    <div>
+      <h1>Welcome to Vehicle Service Management</h1>
+      <p class="mb-4">A modern platform for managing vehicle service requests, customers, and mechanics with ease.</p>
+      <div class="hero-toggle-group">
+        <a href="/customerlogin" class="hero-toggle-btn">Customer</a>
+        <a href="/mechaniclogin" class="hero-toggle-btn">Mechanic</a>
+        <a href="/adminlogin" class="hero-toggle-btn">Admin</a>
+      </div>
+    </div>
+  </section>
+  <div style="text-align:center; margin-bottom:3rem;">
+    <h2 class="section-title">Our Trusted Brands</h2>
+    <div class="brand-logos" style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:2rem;">
+      <img src="{% static 'images/ferrari.png' %}" width="80" alt="Ferrari" />
+      <img src="{% static 'images/ford.png' %}" width="80" alt="Ford" />
+      <img src="{% static 'images/lambo.png' %}" width="80" alt="Lamborghini" />
+      <img src="{% static 'images/mahindra.png' %}" width="80" alt="Mahindra" />
+      <img src="{% static 'images/tvs.png' %}" width="80" alt="TVS" />
+      <img src="{% static 'images/tata.png' %}" width="80" alt="Tata" />
+      <img src="{% static 'images/hero.png' %}" width="80" alt="Hero" />
+      <img src="{% static 'images/rolls.png' %}" width="80" alt="Rolls Royce" />
+      <img src="{% static 'images/suzuki.png' %}" width="80" alt="Suzuki" />
+    </div>
+    <div style="max-width:700px;margin:0 auto;">
+      <p class="lead">Experience seamless vehicle service management, from booking to feedback, with a user-friendly dashboard for every role.</p>
+    </div>
+  </div>
+</body>
+</html>
